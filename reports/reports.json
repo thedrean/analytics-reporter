@@ -215,6 +215,23 @@
       "meta": {
         "name": "Top Domains (30 Days)",
         "description": "Last 30 days' top 20 domains, measured by visits, for all sites."
+      },
+      {
+        "name": "social-test",
+        "frequency": "daily",
+        "query": {
+          "dimensions": ["ga:socialNetwork"],
+          "metrics": ["ga:sessions"],
+          "start-date": "30daysAgo",
+          "end-date": "yesterday",
+          "sort": "-ga:sessions",
+          "filters": "ga:socialNetwork!=(not set)",
+          "max-results": "20"
+        },
+        "meta": {
+          "name": "Top Domains (30 Days)",
+          "description": "Last 30 days' top 20 domains, measured by visits, for all sites."
+        }
       }
     }
   ]
